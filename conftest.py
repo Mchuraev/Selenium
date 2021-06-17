@@ -13,7 +13,7 @@ def pytest_addoption(parser):
                      help="Choose browser's language: en, ru, fr, es")
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope='function')
 def browser(request):
     browser_lang = request.config.getoption('language')
     if browser_lang not in supported_languages:
@@ -27,7 +27,7 @@ def browser(request):
     browser.quit()
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope='function')
 def browser_lg(request):
     language = request.config.getoption('language')
     yield language
