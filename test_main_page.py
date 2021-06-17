@@ -1,15 +1,11 @@
-link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
+link = "http://selenium1py.pythonanywhere.com/"
 
 
-def test_buttom_dif_lang(browser,browser_lg):
+def go_to_login_page(browser):
+    login_link = browser.find_element_by_css_selector("#login_link")
+    login_link.click()
+
+
+def test_guest_can_go_to_login_page(browser):
     browser.get(link)
-    button = browser.find_element_by_css_selector('button.btn-lg')
-    if browser_lg == 'en':
-        assert button.text == 'Add to basket'
-    elif browser_lg == 'ru':
-        assert button.text == 'Добавить в корзину'
-    elif browser_lg == 'fr':
-        assert button.text == 'Ajouter au panier'
-    elif browser_lg == 'es':
-        assert button.text == 'Añadir al carrito'
-
+    go_to_login_page(browser)
