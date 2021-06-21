@@ -9,3 +9,9 @@ class MainPageLocators:
 class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+
+
+class ProductPageLocators:
+    BUTTON_TO_BASKET = (By.CSS_SELECTOR, 'button.btn-lg')
+    PRODUCT_NAME = (By.CSS_SELECTOR, 'div h1')
+    PRODUCT_NAME_LAST = (By.CSS_SELECTOR, '.alertinner strong')
