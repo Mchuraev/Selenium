@@ -22,7 +22,7 @@ def browser(request):
     fp.set_preference("intl.accept_languages", browser_lang)
     browser = webdriver.Firefox(firefox_profile=fp)
     yield browser
-    time.sleep(1)
+    time.sleep(5)
     browser.quit()
 
 
