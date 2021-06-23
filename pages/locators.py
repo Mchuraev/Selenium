@@ -15,3 +15,9 @@ class ProductPageLocators:
     BUTTON_TO_BASKET = (By.CSS_SELECTOR, 'button.btn-lg')
     PRODUCT_NAME = (By.CSS_SELECTOR, 'div h1')
     PRODUCT_NAME_LAST = (By.CSS_SELECTOR, '.alertinner strong')
+    PRODUCT_ADD_SUCCESS = (By.CSS_SELECTOR, '.alertinner')
+
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
